@@ -10,8 +10,8 @@ The goal of this lab was to understand how password‑protected PDF files can be
 broken using a **dictionary attack**, by extracting a crackable hash from the
 PDF and testing it against a wordlist. The lab had two parts:
 
-- **Task 1** — Crack the PDFs using **John the Ripper** (command line) on Kali Linux.
-- **Task 2** — Crack a PDF using the **Networkwalks "Hash Calculator" + "Password Cracker"** web tools, which simulate the same dictionary‑attack logic in the browser.
+- **Task 1**  Crack the PDFs using **John the Ripper** (command line) on Kali Linux.
+- **Task 2**  Crack a PDF using the **Networkwalks "Hash Calculator" + "Password Cracker"** web tools, which simulate the same dictionary‑attack logic in the browser.
 
 > ⚠️ **Disclaimer:** This was a controlled, educational CTF‑style lab using
 > sample PDFs provided by the course (Networkwalks Academy). The techniques
@@ -19,7 +19,7 @@ PDF and testing it against a wordlist. The lab had two parts:
 
 ---
 
-## Task 1 — Cracking with John the Ripper
+## Task 1 Cracking with John the Ripper
 
 ### Step 1: Update system and install John the Ripper
 
@@ -76,7 +76,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hash3.txt
 
 | PDF File | Cracked Password |
 |---|---|
-| My Locked PDF1.pdf | *(cracked — hash1, shown in pot file)* |
+| My Locked PDF1.pdf | `good-luck` |
 | My Locked PDF2.pdf | `password1` |
 | My Locked PDF3.pdf | `1qaz2wsx` |
 
@@ -151,7 +151,7 @@ Entering `password1` unlocked the PDF, revealing:
 
 | Task | Tool Used | Technique | Password Recovered | Flag Captured |
 |---|---|---|---|---|
-| 1 (PDF1) | John the Ripper | Dictionary attack (rockyou.txt) | Cracked ✔ | `nw{cybersecurity_flag_captured_2608}` |
+| 1 (PDF1) | John the Ripper | Dictionary attack (rockyou.txt) | `good-luck` | `nw{cybersecurity_flag_captured_2608}` |
 | 1 (PDF2) | John the Ripper | Dictionary attack (rockyou.txt) | `password1` | `nw{networkwalks_persistence_jtr_270521}` |
 | 1 (PDF3) | John the Ripper | Dictionary attack (rockyou.txt) | `1qaz2wsx` | `nw{networkwalks_flag_260821_1}` |
 | 2 | Networkwalks Hash Calculator + Password Cracker | Dictionary attack (100‑word list) | `password1` | `nw{networkwalks_flag1_jtr_270521_1}` |
