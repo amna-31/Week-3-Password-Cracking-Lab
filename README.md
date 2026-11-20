@@ -99,7 +99,7 @@ unique CTF flag:
 
 ---
 
-## Task 2 — Cracking with the Networkwalks Online Tool
+## Task 2 Cracking with the Networkwalks Online Tool
 
 This task repeated the same concept using Networkwalks Academy's browser‑based
 tools instead of the command line.
